@@ -13,6 +13,14 @@ public class InputPC : MonoBehaviour,IInput
 
     private float _yVelocity;
 
+    private bool _isSliding = false;
+
+    public Animator _anim;
+
+    private void Start()
+    {
+
+    }
 
     public int GetHorizontalInput(int lane)
     {
@@ -53,8 +61,28 @@ public class InputPC : MonoBehaviour,IInput
         return velocity;
     }
 
+    private void Update()
+    {
+        GetSlideInput();
+    }
     public void GetSlideInput()
     {
-        Debug.Log("Slide");
+        if (Input.GetKeyDown(KeyCode.DownArrow) && !_isSliding)
+        {
+            StartCoroutine(Slide());
+        }
+    }
+
+    IEnumerator Slide()
+    {
+        _isSliding = true;
+        _anim.SetBool("isSliding", true);
+        _cc.center = new Vector3(0f, -0.5f, 0f);
+        _cc.height = 1f;
+        yield return new WaitForSeconds(1f);
+        _anim.SetBool("isSliding", false);
+        _cc.center = new Vector3(0f, 0f, 0f);
+        _cc.height = 2f;
+        _isSliding = false;
     }
 }

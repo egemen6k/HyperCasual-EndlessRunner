@@ -605,6 +605,7 @@ MonoBehaviour:
   _cc: {fileID: 1621426241}
   _jumpForce: 10
   _gravity: 0.18
+  _anim: {fileID: 7529533215276013918}
 --- !u!114 &1621426247
 MonoBehaviour:
   m_ObjectHideFlags: 0
