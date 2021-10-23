@@ -10,45 +10,47 @@ public class CharacterMovement : MonoBehaviour
 
     private CharacterController _cc;
     private IInput InputCalculation;
-    private IMoveHorizontal Horizontal;
 
     [SerializeField]
     private int _lane = 1;
     [SerializeField]
     private float _laneDistance = 3.5f;
+    [SerializeField]
+    private float _LaneSmoothness = 10f;
 
     void Start()
     {
         _cc = GetComponent<CharacterController>();
-        if (_cc == null)
-        {
-            Debug.LogError("Character Controller is null");
-        }
-
         InputCalculation = GetComponent<IInput>();
-        if (InputCalculation == null)
-        {
-            Debug.LogError("Input interface is returning null");
-        }
-
-        Horizontal = GetComponent<IMoveHorizontal>();
-        if (Horizontal == null)
-        {
-            Debug.LogError("Horizontal movement is returning null");
-        }
     }
 
     void Update()
     {
         //Horizontal Movement
         _lane = InputCalculation.GetHorizontalInput(_lane);
-        transform.position = Horizontal.GetPosition(_lane, _laneDistance);
+        transform.position = GetPosition(_lane, _laneDistance);
         _cc.center = _cc.center;
 
         //Forward Movement
         _velocity = Vector3.forward * _speed;
         _velocity = InputCalculation.GetJumpInput(_velocity);
         _cc.Move(_velocity * Time.deltaTime);
+    }
 
+    public Vector3 GetPosition(int lane, float laneDistance)
+    {
+        Vector3 targetPosition = transform.up * transform.position.y + transform.forward * transform.position.z;
+
+        if (lane == 2)
+        {
+            targetPosition += Vector3.right * laneDistance;
+        }
+        else if (lane == 0)
+        {
+            targetPosition += Vector3.left * laneDistance;
+        }
+
+        Vector3 newPosition = Vector3.Lerp(transform.position, targetPosition, _LaneSmoothness * Time.deltaTime);
+        return newPosition;
     }
 }

@@ -7,9 +7,9 @@ public class InputPC : MonoBehaviour,IInput
     [SerializeField]
     private CharacterController _cc;
     [SerializeField]
-    private float _jumpForce = 17;
+    private float _jumpForce = 13;
     [SerializeField]
-    private float _gravity = 0.13f;
+    private float _gravity = 0.17f;
     private float _yVelocity;
     public bool _isSliding = false;
 
