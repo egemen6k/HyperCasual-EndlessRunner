@@ -38,7 +38,7 @@ public class PlayerAnimations : MonoBehaviour
             _dirtParticle.Stop();
         }
 
-        if (_inputPC.GetSlideInput() && !_isSliding)
+        if (_inputPC.GetSlideInput() && !_isSliding && _cc.isGrounded)
         {
             StartCoroutine(Slide());
         }

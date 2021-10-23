@@ -5,7 +5,7 @@ using UnityEngine;
 public class CharacterMovement : MonoBehaviour
 {
     [SerializeField]
-    private float _speed = 5f;
+    private float _speed = 8f;
     private Vector3 _velocity;
 
     private CharacterController _cc;
