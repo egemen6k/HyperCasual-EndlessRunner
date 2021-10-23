@@ -10,17 +10,8 @@ public class InputPC : MonoBehaviour,IInput
     private float _jumpForce;
     [SerializeField]
     private float _gravity = 0.15f;
-
     private float _yVelocity;
-
-    private bool _isSliding = false;
-
-    public Animator _anim;
-
-    private void Start()
-    {
-
-    }
+    public bool _isSliding = false;
 
     public int GetHorizontalInput(int lane)
     {
@@ -69,20 +60,8 @@ public class InputPC : MonoBehaviour,IInput
     {
         if (Input.GetKeyDown(KeyCode.DownArrow) && !_isSliding)
         {
-            StartCoroutine(Slide());
+            Debug.Log("Slide");
+            _isSliding = true;
         }
-    }
-
-    IEnumerator Slide()
-    {
-        _isSliding = true;
-        _anim.SetBool("isSliding", true);
-        _cc.center = new Vector3(0f, -0.5f, 0f);
-        _cc.height = 1f;
-        yield return new WaitForSeconds(1f);
-        _anim.SetBool("isSliding", false);
-        _cc.center = new Vector3(0f, 0f, 0f);
-        _cc.height = 2f;
-        _isSliding = false;
     }
 }
