@@ -51,17 +51,15 @@ public class InputPC : MonoBehaviour,IInput
         velocity.y = _yVelocity;
         return velocity;
     }
-
-    private void Update()
+    public bool GetSlideInput()
     {
-        GetSlideInput();
-    }
-    public void GetSlideInput()
-    {
-        if (Input.GetKeyDown(KeyCode.DownArrow) && !_isSliding)
+        if (Input.GetKeyDown(KeyCode.DownArrow))
         {
-            Debug.Log("Slide");
-            _isSliding = true;
+            return true;
+        }
+        else
+        {
+            return false;
         }
     }
 }

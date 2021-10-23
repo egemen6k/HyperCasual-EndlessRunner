@@ -6,6 +6,6 @@ public interface IInput
 {
     int GetHorizontalInput(int lane);
     Vector3 GetJumpInput(Vector3 velocity);
-    void GetSlideInput();
+    bool GetSlideInput();
 
 }

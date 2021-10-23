@@ -9,7 +9,8 @@ public class PlayerAnimations : MonoBehaviour
     [SerializeField]
     private CharacterController _cc;
     public ParticleSystem _dirtParticle;
-    private InputPC _inputPC;
+    private IInput _inputPC;
+    private bool _isSliding;
 
     private void Awake()
     {
@@ -18,7 +19,7 @@ public class PlayerAnimations : MonoBehaviour
 
     private void Start()
     {
-        _inputPC = GetComponent<InputPC>();
+        _inputPC = GetComponent<IInput>();
     }
 
     private void Update()
@@ -30,28 +31,30 @@ public class PlayerAnimations : MonoBehaviour
             {
                 _dirtParticle.Play();
             }
-            if (_inputPC._isSliding)
-            {
-                StartCoroutine(Slide());
-            }
         }
         else
         {
             _anim.SetBool("Jump_Anim", true);
             _dirtParticle.Stop();
         }
+
+        if (_inputPC.GetSlideInput() && !_isSliding)
+        {
+            StartCoroutine(Slide());
+        }
     }
 
     IEnumerator Slide()
     {
+        _isSliding = true;
         _dirtParticle.Stop();
         _anim.SetBool("isSliding", true);
         _cc.center = new Vector3(0f, -0.5f, 0f);
         _cc.height = 1f;
         yield return new WaitForSeconds(1f);
-        _inputPC._isSliding = false;
         _anim.SetBool("isSliding", false);
         _cc.center = new Vector3(0f, 0f, 0f);
         _cc.height = 2f;
+        _isSliding = false;
     }
 }
