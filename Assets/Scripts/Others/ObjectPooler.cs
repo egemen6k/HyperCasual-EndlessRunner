@@ -36,7 +36,7 @@ public class ObjectPooler : MonoBehaviour
             for (int i = 0; i < pool.size; i++)
             {
                 GameObject obj = Instantiate(pool.prefab);
-                //obj.hideFlags = HideFlags.HideInHierarchy;
+                obj.hideFlags = HideFlags.HideInHierarchy;
                 obj.SetActive(false);
                 objectPool.Enqueue(obj);
             }

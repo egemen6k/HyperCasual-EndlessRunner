@@ -15,8 +15,7 @@ public class CoinDisplayer : MonoBehaviour
 
     private void Update()
     {
-        Vector3 newPosition = new Vector3(transform.position.x , transform.position.y , _player.transform.position.z + __offset.z -0.5f);
-        transform.position = newPosition;
-        //transform.position = new Vector3(__offset.x - 2 , __offset.y  , (_player.transform.position.z + 10));
+        transform.position = new Vector3(-11.2f , 3.9f , _player.transform.position.z + __offset.z -0.5f);
+
     }
 }
