@@ -35,12 +35,14 @@ public class CharacterMovement : MonoBehaviour
         _velocity = InputCalculation.GetJumpInput(_velocity);
         _cc.Move(_velocity * Time.deltaTime);
 
+
         if (_speed < _maxSpeed)
         {
             _speed += 0.1f * Time.deltaTime;
         }
-    }
-
+    }  
+        
+    
     public Vector3 GetPosition(int lane, float laneDistance)
     {
         Vector3 targetPosition = transform.up * transform.position.y + transform.forward * transform.position.z;

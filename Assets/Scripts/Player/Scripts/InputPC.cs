@@ -12,6 +12,7 @@ public class InputPC : MonoBehaviour,IInput
     private float _gravity = 0.17f;
     private float _yVelocity;
     private PlayerAnimations _pA;
+    public GameObject player;
 
     private void Start()
     {

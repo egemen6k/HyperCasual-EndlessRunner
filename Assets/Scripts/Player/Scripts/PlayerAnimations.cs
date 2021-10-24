@@ -34,7 +34,8 @@ public class PlayerAnimations : MonoBehaviour
         }
         else
         {
-            StartCoroutine(Jump());
+            _anim.SetBool("Jump_Anim", true);
+            //StartCoroutine(Jump());
             _dirtParticle.Stop();
         }
 
@@ -63,7 +64,7 @@ public class PlayerAnimations : MonoBehaviour
         _anim.SetBool("Jump_Anim", true);
         _cc.center = new Vector3(0, 0.8f, 0);
         _cc.height = .1f;
-        yield return new WaitForSeconds(.7f);
+        yield return new WaitForSeconds(.5f);
         _cc.center = new Vector3(0, 0.28f, 0);
         _cc.height = 2f;
     }

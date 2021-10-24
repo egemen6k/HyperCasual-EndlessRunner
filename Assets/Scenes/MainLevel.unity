@@ -1169,7 +1169,7 @@ CharacterController:
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
+  m_MinMoveDistance: 0
   m_Center: {x: 0, y: 0.28, z: 0}
 --- !u!114 &1621426242
 MonoBehaviour:
@@ -1236,8 +1236,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _cc: {fileID: 1621426241}
-  _jumpForce: 13
+  _jumpForce: 15
   _gravity: 0.17
+  player: {fileID: 1621426240}
 --- !u!114 &1621426247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2855,7 +2856,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   highestScore: 0
-  speedStatic: 0
+  speedStatic: 5
 --- !u!4 &4758529302844192630
 Transform:
   m_ObjectHideFlags: 0
