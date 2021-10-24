@@ -8,4 +8,5 @@
     *Slide animasyon düzeltilmesi gerekiyor
     *post processing & curve shader uygulanabilir
     *müzik eklenmesi gerekiyor
+    **animasyon hızı
 */

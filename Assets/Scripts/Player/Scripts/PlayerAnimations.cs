@@ -11,15 +11,13 @@ public class PlayerAnimations : MonoBehaviour
     public ParticleSystem _dirtParticle;
     private IInput _inputPC;
     public bool _isSliding;
-
-    private void Awake()
-    {
-        _anim.SetBool("Run_Anim", true);
-    }
+    private CharacterMovement _characterMovement;
 
     private void Start()
     {
         _inputPC = GetComponent<IInput>();
+        _anim.SetBool("Run_Anim", true);
+        _characterMovement = GetComponent<CharacterMovement>();
     }
 
     private void Update()
@@ -27,6 +25,12 @@ public class PlayerAnimations : MonoBehaviour
         if (_cc.isGrounded)
         {
             _anim.SetBool("Jump_Anim", false);
+
+            if (!_isSliding)
+            {
+                _anim.speed = _characterMovement._speed / 10;
+            }
+
             if (!_dirtParticle.isPlaying)
             {
                 _dirtParticle.Play();
@@ -34,7 +38,6 @@ public class PlayerAnimations : MonoBehaviour
         }
         else
         {
-            //_anim.SetBool("Jump_Anim", true);
             StartCoroutine(Jump());
             _dirtParticle.Stop();
         }
@@ -47,6 +50,7 @@ public class PlayerAnimations : MonoBehaviour
 
     IEnumerator Slide()
     {
+        _anim.speed = 1f;
         _isSliding = true;
         _dirtParticle.Stop();
         _anim.SetBool("isSliding", true);
@@ -61,10 +65,10 @@ public class PlayerAnimations : MonoBehaviour
 
     IEnumerator Jump()
     {
-        _anim.SetBool("Jump_Anim", true);      
+        _anim.speed = 1f;
+        _anim.SetBool("Jump_Anim", true);
         _cc.center = new Vector3(0, 0.8f, 0);
         yield return new WaitForSeconds(.65f);
         _cc.center = new Vector3(0, 0.28f, 0);
-        _cc.height = 2f;
     }
 }
