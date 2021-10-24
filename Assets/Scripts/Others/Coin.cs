@@ -9,9 +9,11 @@ public class Coin : MonoBehaviour
     private Animator _anim;
     private GameObject coinDisplay;
     private bool _animStarted;
+    private GameObject player;
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.Find("Player");
         _ui = GameObject.Find("Canvas").GetComponent<UIManager>();
         _anim = GetComponent<Animator>();
         coinDisplay = GameObject.Find("CoinDisplay");
@@ -22,7 +24,9 @@ public class Coin : MonoBehaviour
     {
         if (_animStarted)
         {
-            transform.position = Vector3.Lerp(transform.position, coinDisplay.transform.position + new Vector3(0,0,1f), 4f * Time.deltaTime);
+            Vector3 newPosition = Vector3.Lerp(transform.position, coinDisplay.transform.position + new Vector3(0, 0, 1f), 4f * Time.deltaTime);
+            //newPosition.z = player.transform.position.z + 1f;
+            transform.position = newPosition;
         }
 
         if (Vector3.Distance(transform.position,coinDisplay.transform.position) < 3f)
