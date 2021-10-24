@@ -58,7 +58,7 @@ public class PlayerAnimations : MonoBehaviour
         _cc.height = 1f;
         yield return new WaitForSeconds(1f);
         _anim.SetBool("isSliding", false);
-        _cc.center = new Vector3(0f, 0f, 0f);
+        _cc.center = new Vector3(0f, 0.28f, 0f);
         _cc.height = 2f;
         _isSliding = false;
     }
@@ -67,7 +67,7 @@ public class PlayerAnimations : MonoBehaviour
     {
         _anim.speed = 1f;
         _anim.SetBool("Jump_Anim", true);
-        _cc.center = new Vector3(0, 0.8f, 0);
+        //_cc.center = new Vector3(0, 0.8f, 0);
         yield return new WaitForSeconds(.65f);
         _cc.center = new Vector3(0, 0.28f, 0);
     }
