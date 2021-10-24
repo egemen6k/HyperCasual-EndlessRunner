@@ -23,7 +23,7 @@ public class Coin : MonoBehaviour
     {
         if (_animStarted)
         {
-            transform.position = Vector3.Lerp(transform.position, coinDisplay.transform.position + new Vector3(0, 0, 2f), _cm._speed * Time.deltaTime);
+            transform.position = Vector3.Lerp(transform.position, coinDisplay.transform.position + new Vector3(0, 0, 2f), _cm._speed * 3/4 * Time.deltaTime);
         }
 
         if (transform.position.y > 7f)
