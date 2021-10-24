@@ -25,16 +25,15 @@ public class PlayerAnimations : MonoBehaviour
         if (_cc.isGrounded)
         {
             _anim.speed = _characterMovement._speed / 10;
-        }
-
-        if (!_cc.isGrounded )
-        { 
-            _dirtParticle.Stop();
-            
             if (!_dirtParticle.isPlaying)
             {
                 _dirtParticle.Play();
             }
+        }
+
+        if (!_cc.isGrounded )
+        { 
+            _dirtParticle.Stop();          
         }
         
 
