@@ -10,7 +10,7 @@ public class PlayerAnimations : MonoBehaviour
     private CharacterController _cc;
     public ParticleSystem _dirtParticle;
     private IInput _inputPC;
-    private bool _isSliding;
+    public bool _isSliding;
 
     private void Awake()
     {

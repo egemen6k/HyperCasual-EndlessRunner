@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
     public int highestScore = 0;
     private UIManager _ui;
-    public float speedStatic;
+    public float speedStatic = 5f;
     private void Awake()
     {
         if (Instance == null)

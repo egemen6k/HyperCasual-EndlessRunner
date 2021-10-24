@@ -11,8 +11,12 @@ public class InputPC : MonoBehaviour,IInput
     [SerializeField]
     private float _gravity = 0.17f;
     private float _yVelocity;
-    public bool _isSliding = false;
+    private PlayerAnimations _pA;
 
+    private void Start()
+    {
+        _pA = GetComponent<PlayerAnimations>();
+    }
     public int GetHorizontalInput(int lane)
     {
         if (Input.GetKeyDown(KeyCode.RightArrow))
@@ -37,7 +41,7 @@ public class InputPC : MonoBehaviour,IInput
 
     public Vector3 GetJumpInput(Vector3 velocity)
     {
-        if (_cc.isGrounded)
+        if (_cc.isGrounded && !_pA._isSliding)
         {
             if (Input.GetKeyDown(KeyCode.UpArrow))
             {
