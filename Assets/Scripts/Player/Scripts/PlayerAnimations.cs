@@ -24,23 +24,19 @@ public class PlayerAnimations : MonoBehaviour
     {
         if (_cc.isGrounded)
         {
-            _anim.SetBool("Jump_Anim", false);
+            _anim.speed = _characterMovement._speed / 10;
+        }
 
-            if (!_isSliding)
-            {
-                _anim.speed = _characterMovement._speed / 10;
-            }
-
+        if (!_cc.isGrounded )
+        { 
+            _dirtParticle.Stop();
+            
             if (!_dirtParticle.isPlaying)
             {
                 _dirtParticle.Play();
             }
         }
-        else
-        {
-            StartCoroutine(Jump());
-            _dirtParticle.Stop();
-        }
+        
 
         if (_inputPC.GetSlideInput() && !_isSliding && _cc.isGrounded)
         {
@@ -59,16 +55,23 @@ public class PlayerAnimations : MonoBehaviour
         yield return new WaitForSeconds(1f);
         _anim.SetBool("isSliding", false);
         _cc.center = new Vector3(0f, 0.28f, 0f);
-        _cc.height = 2f;
+        _cc.height = 2.2f;
         _isSliding = false;
     }
 
     IEnumerator Jump()
     {
+        Debug.Log("asdqwasde");
         _anim.speed = 1f;
         _anim.SetBool("Jump_Anim", true);
-        //_cc.center = new Vector3(0, 0.8f, 0);
-        yield return new WaitForSeconds(.65f);
+        _cc.center = new Vector3(0, 0.8f, 0);
+        yield return new WaitForSeconds(0.65f);
         _cc.center = new Vector3(0, 0.28f, 0);
+        _anim.SetBool("Jump_Anim", false);
+    }
+
+    public void JumpingAnim()
+    {
+        StartCoroutine(Jump());
     }
 }
