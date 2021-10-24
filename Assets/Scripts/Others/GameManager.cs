@@ -5,6 +5,8 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
+    public int highestScore = 0;
+    private UIManager _ui;
     private void Awake()
     {
         if (Instance == null)
@@ -15,16 +17,17 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        DontDestroyOnLoad(gameObject);
     }
 
-    void Start()
+    public void UpdateHighestScore(int score)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (score > highestScore)
+        {
+            highestScore = score;
+            _ui = GameObject.Find("Canvas").GetComponent<UIManager>();
+            _ui.UpdateHighestScore(highestScore);
+        }
     }
 }
