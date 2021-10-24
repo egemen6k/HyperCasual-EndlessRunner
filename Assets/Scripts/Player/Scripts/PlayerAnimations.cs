@@ -50,9 +50,9 @@ public class PlayerAnimations : MonoBehaviour
         _isSliding = true;
         _dirtParticle.Stop();
         _anim.SetBool("isSliding", true);
-        _cc.center = new Vector3(0f, -0.5f, 0f);
+        _cc.center = new Vector3(0f, -0.3f, 0f);
         _cc.height = 1f;
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(.5f);
         _anim.SetBool("isSliding", false);
         _cc.center = new Vector3(0f, 0.28f, 0f);
         _cc.height = 2.2f;
@@ -61,7 +61,6 @@ public class PlayerAnimations : MonoBehaviour
 
     IEnumerator Jump()
     {
-        Debug.Log("asdqwasde");
         _anim.speed = 1f;
         _anim.SetBool("Jump_Anim", true);
         _cc.center = new Vector3(0, 0.8f, 0);
