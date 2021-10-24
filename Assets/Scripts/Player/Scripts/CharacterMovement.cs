@@ -20,6 +20,7 @@ public class CharacterMovement : MonoBehaviour
     {
         _cc = GetComponent<CharacterController>();
         InputCalculation = GetComponent<IInput>();
+        _speed = GameManager.Instance.speedStatic;
     }
 
     void Update()
