@@ -34,7 +34,7 @@ public class PlayerAnimations : MonoBehaviour
         }
         else
         {
-            _anim.SetBool("Jump_Anim", true);
+            StartCoroutine(Jump());
             _dirtParticle.Stop();
         }
 
@@ -56,5 +56,15 @@ public class PlayerAnimations : MonoBehaviour
         _cc.center = new Vector3(0f, 0f, 0f);
         _cc.height = 2f;
         _isSliding = false;
+    }
+
+    IEnumerator Jump()
+    {
+        _anim.SetBool("Jump_Anim", true);
+        _cc.center = new Vector3(0, 0.8f, 0);
+        _cc.height = .1f;
+        yield return new WaitForSeconds(.7f);
+        _cc.center = new Vector3(0, 0.28f, 0);
+        _cc.height = 2f;
     }
 }

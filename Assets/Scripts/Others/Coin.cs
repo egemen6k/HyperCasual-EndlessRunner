@@ -7,15 +7,15 @@ public class Coin : MonoBehaviour
 {
     private UIManager _ui;
     private GameObject coinDisplay;
-    private bool _animStarted;
     private CharacterMovement _cm;
+    private bool _animStarted;
 
     // Start is called before the first frame update
     void Start()
     {
         _ui = GameObject.Find("Canvas").GetComponent<UIManager>();
-        coinDisplay = GameObject.Find("CoinDisplay");
         _cm = GameObject.Find("Player").GetComponent<CharacterMovement>();
+        coinDisplay = GameObject.Find("CoinDisplay");
     }
 
     // Update is called once per frame
@@ -28,7 +28,6 @@ public class Coin : MonoBehaviour
 
         if (transform.position.y > 7f)
         {
-            _animStarted = false;
             Destroy(gameObject);
         }
     }

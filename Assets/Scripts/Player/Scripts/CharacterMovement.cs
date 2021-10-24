@@ -5,11 +5,10 @@ using UnityEngine;
 public class CharacterMovement : MonoBehaviour
 {
     public float _speed = 8f;
+    private float _maxSpeed = 25f;
     private Vector3 _velocity;
-
     private CharacterController _cc;
     private IInput InputCalculation;
-
     [SerializeField]
     private int _lane = 1;
     [SerializeField]
@@ -34,6 +33,11 @@ public class CharacterMovement : MonoBehaviour
         _velocity = Vector3.forward * _speed;
         _velocity = InputCalculation.GetJumpInput(_velocity);
         _cc.Move(_velocity * Time.deltaTime);
+
+        if (_speed < _maxSpeed)
+        {
+            _speed += 0.1f * Time.deltaTime;
+        }
     }
 
     public Vector3 GetPosition(int lane, float laneDistance)
