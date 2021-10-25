@@ -6,7 +6,8 @@
     +++*geçişlerde zorluk seviyesi fonksiyonu eklenebilir
     +++**animasyon hızı
     +++*Slide animasyon düzeltilmesi gerekiyor
+    +++*müzik eklenmesi gerekiyor
 
     *post processing & curve shader uygulanabilir
-    *müzik eklenmesi gerekiyor
+
 */
