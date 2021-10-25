@@ -1306,7 +1306,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _cc: {fileID: 1621426241}
   _jumpForce: 10
-  _gravity: 0.17
+  _gravity: 0.4
 --- !u!114 &1621426247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1323,7 +1323,6 @@ MonoBehaviour:
   _cc: {fileID: 1621426241}
   _dirtParticle: {fileID: 2083786425}
   _isSliding: 0
-  _isJumping: 0
 --- !u!198 &2083786425 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 1438565936, guid: 9a18c280859e86548966373fb4c73df6,

@@ -41,12 +41,11 @@ public class InputPC : MonoBehaviour,IInput
         return lane;
     }
 
-    //!_pA._isSliding
     public Vector3 GetJumpInput(Vector3 velocity)
     {
         if (_cc.isGrounded)
         {
-            if (Input.GetKeyDown(KeyCode.UpArrow))
+            if (Input.GetKeyDown(KeyCode.UpArrow) && !_pA._isSliding)
             {
                 _pA.JumpingAnim();
                 _yVelocity = _jumpForce;
