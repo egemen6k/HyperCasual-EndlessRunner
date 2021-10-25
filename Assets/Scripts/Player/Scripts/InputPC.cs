@@ -17,7 +17,7 @@ public class InputPC : MonoBehaviour,IInput
     {
         _pA = GetComponent<PlayerAnimations>();
         _jumpForce = 10;
-        _gravity = 0.17f;
+        _gravity = 0.4f;
     }
     public int GetHorizontalInput(int lane)
     {
