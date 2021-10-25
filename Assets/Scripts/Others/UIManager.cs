@@ -18,12 +18,6 @@ public class UIManager : MonoBehaviour
         UpdateHighestScore(GameManager.Instance.highestScore);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void UpdateCoin(int collected)
     {
         _coins += collected;

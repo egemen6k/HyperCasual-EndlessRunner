@@ -5,7 +5,7 @@ using UnityEngine;
 public class CharacterMovement : MonoBehaviour
 {
     public float _speed;
-    private float _maxSpeed = 25f;
+    private float _maxSpeed = 20f;
     private Vector3 _velocity;
     private CharacterController _cc;
     private IInput InputCalculation;

@@ -8,13 +8,13 @@ public class MainMenu : MonoBehaviour
 {
     public void Easy()
     {
-        GameManager.Instance.speedStatic = 5f;
+        GameManager.Instance.speedStatic = 10f;
         SceneManager.LoadScene(1);
     }
 
     public void Medium()
     {
-        GameManager.Instance.speedStatic = 10f;
+        GameManager.Instance.speedStatic = 12.5f;
         SceneManager.LoadScene(1);
     }
 
