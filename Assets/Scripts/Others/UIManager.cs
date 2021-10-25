@@ -43,6 +43,7 @@ public class UIManager : MonoBehaviour
    public void RestartGame()
    {
         SceneManager.LoadScene(0);
+        AudioController.Instance.PlaySound("Theme");
         Time.timeScale = 1f;
    }
 }

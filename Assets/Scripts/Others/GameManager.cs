@@ -12,7 +12,6 @@ public class GameManager : MonoBehaviour
     {
         QualitySettings.vSyncCount = 0;
         Application.targetFrameRate = 60;
-
         speedStatic = 15f;
 
         if (Instance == null)

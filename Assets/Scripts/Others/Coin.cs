@@ -35,6 +35,7 @@ public class Coin : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         _ui.UpdateCoin(1);
+        AudioController.Instance.PlaySound("Coin");
         _animStarted = true;
     }
 }

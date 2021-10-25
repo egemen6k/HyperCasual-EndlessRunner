@@ -9,6 +9,8 @@ public class CollisionBehav : MonoBehaviour
         if (hit.gameObject.CompareTag("Obstacle"))
         {
             Time.timeScale = 0f;
+            AudioController.Instance.PlaySound("Lose");
+            AudioController.Instance.StopSound("Theme");
             GameObject.Find("Canvas").GetComponent<UIManager>().collisionBehav();
         }
     }
