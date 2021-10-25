@@ -9,5 +9,7 @@
     +++*müzik eklenmesi gerekiyor
 
     *post processing & curve shader uygulanabilir
+    *tile prefabler düzeltilsin
+    *
 
 */
