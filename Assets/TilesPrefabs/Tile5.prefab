@@ -78,6 +78,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.02, y: 0.019999996, z: 0.21967825}
   m_Center: {x: 0, y: 0, z: 0.09983912}
+--- !u!65 &6136721471727025569
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6987741438954600553}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.02, y: 0.019999996, z: 0.019999996}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &3801549440544439162
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -146,19 +159,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &6136721471727025569
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6987741438954600553}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.02, y: 0.019999996, z: 0.019999996}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &8390368578055817625
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -213,7 +213,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 1c2f331b53294514999ad39d031501f4,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 24.4
+      value: 9.6
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1c2f331b53294514999ad39d031501f4,
         type: 3}
@@ -270,6 +270,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TrafficCone (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1c2f331b53294514999ad39d031501f4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c2f331b53294514999ad39d031501f4, type: 3}
 --- !u!4 &443526578043136735 stripped
@@ -299,7 +304,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 1c2f331b53294514999ad39d031501f4,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 24.4
+      value: 9.6
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1c2f331b53294514999ad39d031501f4,
         type: 3}
@@ -356,6 +361,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TrafficCone (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1c2f331b53294514999ad39d031501f4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c2f331b53294514999ad39d031501f4, type: 3}
 --- !u!1 &633750675421186415 stripped
@@ -385,7 +395,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 1c2f331b53294514999ad39d031501f4,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 24.4
+      value: 9.6
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1c2f331b53294514999ad39d031501f4,
         type: 3}
@@ -442,6 +452,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TrafficCone (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1c2f331b53294514999ad39d031501f4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c2f331b53294514999ad39d031501f4, type: 3}
 --- !u!1 &1949898658842652913 stripped
@@ -471,7 +486,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 1c2f331b53294514999ad39d031501f4,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 24.4
+      value: 9.6
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1c2f331b53294514999ad39d031501f4,
         type: 3}
@@ -528,6 +543,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TrafficCone (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1c2f331b53294514999ad39d031501f4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c2f331b53294514999ad39d031501f4, type: 3}
 --- !u!1 &4205676216481746230 stripped
@@ -557,7 +577,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 1c2f331b53294514999ad39d031501f4,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 24.4
+      value: 9.6
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1c2f331b53294514999ad39d031501f4,
         type: 3}
@@ -614,6 +634,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TrafficCone (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1c2f331b53294514999ad39d031501f4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c2f331b53294514999ad39d031501f4, type: 3}
 --- !u!1 &3808195789083263834 stripped
@@ -643,7 +668,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 1c2f331b53294514999ad39d031501f4,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 24.4
+      value: 9.6
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1c2f331b53294514999ad39d031501f4,
         type: 3}
@@ -700,6 +725,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TrafficCone (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1c2f331b53294514999ad39d031501f4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c2f331b53294514999ad39d031501f4, type: 3}
 --- !u!4 &5255536395983609251 stripped
@@ -729,7 +759,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 1c2f331b53294514999ad39d031501f4,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 24.4
+      value: 9.6
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1c2f331b53294514999ad39d031501f4,
         type: 3}
@@ -785,6 +815,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TrafficCone (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1c2f331b53294514999ad39d031501f4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c2f331b53294514999ad39d031501f4, type: 3}
@@ -896,7 +931,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 1c2f331b53294514999ad39d031501f4,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 24.4
+      value: 9.6
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1c2f331b53294514999ad39d031501f4,
         type: 3}
@@ -952,6 +987,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TrafficCone (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1c2f331b53294514999ad39d031501f4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c2f331b53294514999ad39d031501f4, type: 3}
@@ -1039,6 +1079,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TrafficCone
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1c2f331b53294514999ad39d031501f4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c2f331b53294514999ad39d031501f4, type: 3}
 --- !u!4 &8995350060173913624 stripped
@@ -1068,7 +1113,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 1c2f331b53294514999ad39d031501f4,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 24.4
+      value: 9.6
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1c2f331b53294514999ad39d031501f4,
         type: 3}
@@ -1125,6 +1170,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TrafficCone (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1c2f331b53294514999ad39d031501f4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c2f331b53294514999ad39d031501f4, type: 3}
 --- !u!4 &8868088474139396433 stripped
@@ -1154,7 +1204,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 1c2f331b53294514999ad39d031501f4,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 24.4
+      value: 9.6
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1c2f331b53294514999ad39d031501f4,
         type: 3}
@@ -1210,6 +1260,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TrafficCone (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1c2f331b53294514999ad39d031501f4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c2f331b53294514999ad39d031501f4, type: 3}

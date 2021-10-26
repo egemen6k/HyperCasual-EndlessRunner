@@ -27,33 +27,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.02, y: 0.019999996, z: 0.21967825}
   m_Center: {x: 0, y: 0, z: 0.09983912}
---- !u!65 &1664999121855315338
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1876853718546133461}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 0.02, y: 0.019999996, z: 0.21967825}
-  m_Center: {x: 0, y: 0, z: 0.09983912}
---- !u!64 &8484868214817015475
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1876853718546133461}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -5495902117074765545, guid: 1c2f331b53294514999ad39d031501f4, type: 3}
 --- !u!65 &4260244890788396713
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -140,7 +113,6 @@ Transform:
   - {fileID: 8995350060173913624}
   - {fileID: 5922081860875994908}
   - {fileID: 776842017742606278}
-  - {fileID: 1243059673202977647}
   - {fileID: 804372153225642678}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -155,7 +127,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 1c2f331b53294514999ad39d031501f4,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1c2f331b53294514999ad39d031501f4,
         type: 3}
@@ -212,6 +184,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TrafficCone (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1c2f331b53294514999ad39d031501f4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c2f331b53294514999ad39d031501f4, type: 3}
 --- !u!1 &27695163367970828 stripped
@@ -225,87 +202,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1c2f331b53294514999ad39d031501f4,
     type: 3}
   m_PrefabInstance: {fileID: 910586166817219933}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &1642271604339444868
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 7412227662940873943}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 1c2f331b53294514999ad39d031501f4,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 1c2f331b53294514999ad39d031501f4,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.03
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 1c2f331b53294514999ad39d031501f4,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 1c2f331b53294514999ad39d031501f4,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 24.63
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 1c2f331b53294514999ad39d031501f4,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071067
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 1c2f331b53294514999ad39d031501f4,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 1c2f331b53294514999ad39d031501f4,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 1c2f331b53294514999ad39d031501f4,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 1c2f331b53294514999ad39d031501f4,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 1c2f331b53294514999ad39d031501f4,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 1c2f331b53294514999ad39d031501f4,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 1c2f331b53294514999ad39d031501f4,
-        type: 3}
-      propertyPath: m_Name
-      value: TrafficCone (2)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 1c2f331b53294514999ad39d031501f4, type: 3}
---- !u!1 &1876853718546133461 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 1c2f331b53294514999ad39d031501f4,
-    type: 3}
-  m_PrefabInstance: {fileID: 1642271604339444868}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1243059673202977647 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1c2f331b53294514999ad39d031501f4,
-    type: 3}
-  m_PrefabInstance: {fileID: 1642271604339444868}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2463915182118059279
 PrefabInstance:
@@ -332,7 +228,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: e1a52d0b8f3ee4f46b2b858adca8e716,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.58
+      value: 3.86
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e1a52d0b8f3ee4f46b2b858adca8e716,
         type: 3}
@@ -378,6 +274,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: RoadWorksBarrierHigh
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e1a52d0b8f3ee4f46b2b858adca8e716,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1a52d0b8f3ee4f46b2b858adca8e716, type: 3}
@@ -460,6 +361,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TrafficCone (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1c2f331b53294514999ad39d031501f4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c2f331b53294514999ad39d031501f4, type: 3}
 --- !u!1 &6441456710258007462 stripped
@@ -485,6 +391,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TrafficCone
+      objectReference: {fileID: 0}
+    - target: {fileID: 1276561402874880090, guid: 6feacdb71502e7d49867b74068bafbf2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 1944589090190310112, guid: 6feacdb71502e7d49867b74068bafbf2,
         type: 3}
@@ -615,6 +526,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: RoadWorksBarrierHigh (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7589611979842909817, guid: 3dd2ec22a01eb3a4090a70b1bcabfe1f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3dd2ec22a01eb3a4090a70b1bcabfe1f, type: 3}
@@ -771,6 +687,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: RoadWorksBarrierLow
+      objectReference: {fileID: 0}
+    - target: {fileID: 9010856683186672566, guid: 8fb9a011352167e4f8aaab1f38aaa9db,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8fb9a011352167e4f8aaab1f38aaa9db, type: 3}
